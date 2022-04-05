@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "gliech",
   "license": "MIT",
-  "repository": "github:gliech/create-github-secret-action",
+  "repository": "github:call-me-miro/create-github-secret-action",
   "devDependencies": {
     "@google/semantic-release-replace-plugin": "1",
     "@semantic-release/changelog": "6",
