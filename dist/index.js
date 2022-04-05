@@ -11925,6 +11925,8 @@ async function run() {
   try {
     // Get all inputs
     const input_name = core.getInput("name").replace(/['"]+/g, '')
+    core.info(`bullshit input name is '${secret_target}'`)
+
     const input_value = core.getInput("value")
 
     const input_location = core.getInput("location")
