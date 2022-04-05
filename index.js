@@ -61,7 +61,7 @@ async function run() {
     const signed_secret_value = Buffer.from(secret_value_bytes).toString("base64")
 
     // Create or update secret
-    core.info(`Setting ${secret_target.type} secret '${input_name}'`)
+    core.info(`Setting ${secret_target.type} secret ${input_name}`)
     const { status } = await upsert_secret({
       ...secret_target.data,
       secret_name: input_name,
@@ -77,13 +77,13 @@ async function run() {
 
     if (status in response_codes) {
       core.info(
-        `Successfully ${response_codes[status]} secret '${input_name}' in ` +
+        `Successfully ${response_codes[status]} secret ${input_name} in ` +
         `${secret_target.type} '${secret_target}'`
       )
     } else {
       core.warn(
         `Encountered unexpected HTTP status code while creating secret ` +
-        `'${input_name}'. Epected one of '201', '204' but got '${status}'`
+        `${input_name}. Epected one of '201', '204' but got '${status}'`
       )
     }
 
